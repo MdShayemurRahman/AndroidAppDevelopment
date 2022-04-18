@@ -22,10 +22,36 @@ public class MyStudentApp {
 		students.add(new Trainee("Aylaa", 2, "204103", 100,
 				new Address("Yrttikatu 1", "Tampere"), "Nokia", 1200));
 
+		students.add(new Trainee("Sami", 2, "204104", 130,
+				new Address("Yrttikatu 1", "Tampere"), "Nokia", 1200));
+
+		// how to add credit points to the third student..
+		students.get(2).addCreditPoints(130); // adding Aylaa's credit to 130
+
+		// how to change Taiyeeb's address..
+		students.get(1).setAddress(new Address("Yrttikatu 1", "Tampere"));
+
+		// how to add address for Numayr..
+		students.get(0).setAddress(new Address("Yrttikatu 1", "Tampere"));
+
+		// find aylaa is in the array List or not!
+		String name = "Aylaa";
+		int studentIndex = 0;
+		for (int i = 0; i < students.size(); i++) {
+			if(students.get(i).getName().equals( name )) {
+				System.out.println(name + " exist in the students list");
+				students.get(i).addCreditPoints(150); // adding more credits to Aylaa..
+
+			}
+		}
+
 		// print array data..
 		for (Student S: students) {
 			S.printStudentData();
 		}
+
+
+
 	}
 }
 
