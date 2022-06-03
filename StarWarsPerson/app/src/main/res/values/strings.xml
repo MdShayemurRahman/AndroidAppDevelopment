@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Star Wars Person</string>
+    <string name="information">Information</string>
+    <string name="active">Active</string>
+</resources>
